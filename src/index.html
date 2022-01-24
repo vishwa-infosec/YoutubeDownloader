@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>LikeIt</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form id="form">
+      <header>Youtube Downloader</header>
+      <div class="url-input">
+        <span class="title">Paste Video Url:</span>
+        <div class="field">
+          <input
+            type="text"
+            onkeyup="changeThumbnail()"
+            id="url"
+            placeholder="https://www.youtube.com/watch?v=abcDeFGhIjk"
+            required
+          />
+        </div>
+      </div>
+      <div class="preview-area">
+        <span id="span">Paste Video Url To See Preview</span>
+      </div>
+      <button class="download-btn" id="download" type="submit">Download</button>
+    </form>
+    <script src="download.js"></script>
+  </body>
+</html>
