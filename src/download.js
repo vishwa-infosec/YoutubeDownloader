@@ -15,11 +15,12 @@ function changeThumbnail(){
 }
 
 function download(){
-    const url = document.getElementById("url").value;
-    const form = document.getElementById("form")
     const fs = require('fs')
     const ytdl = require('ytdl-core')
+    const url = document.getElementById("url").value;
+    const form = document.getElementById("form")
     form.addEventListener('submit', (e) => {
+        e.preventDefault()
         ytdl(url).pipe(fs.createWriteStream('video.mp4'))
     });
 }
