@@ -16,6 +16,7 @@ const createWindow = () => {
     //transparent:true,
   });
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
+  mainWindow.setMenuBarVisibility(false)
 };
 
 app.on('ready', createWindow);

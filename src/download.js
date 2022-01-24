@@ -1,9 +1,5 @@
 function changeThumbnail(){
     const url = document.getElementById("url").value;
-    if(url == ''){
-        document.getElementById("span").innerText("Paste Video Url To See Preview")
-    }
-    console.log(url);
     if(url.indexOf("https://www.youtube.com/watch?v=") != -1){
         let vidId = url.split("v=")[1].substring(0,11);
         let thumbnailurl = `https://img.youtube.com/vi/${vidId}/maxresdefault.jpg`;
