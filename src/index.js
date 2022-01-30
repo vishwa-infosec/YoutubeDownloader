@@ -1,6 +1,6 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow,dialog } = require('electron');
+const { join } = require('path');
 const path = require('path');
-
 
 if (require('electron-squirrel-startup')) {
   app.quit();
@@ -12,9 +12,8 @@ const createWindow = () => {
     height: 700,
     webPreferences:{
       nodeIntegration:true,
-      enableRemoteModule: true,
+      preload: join(__dirname,"preload.js")
     }
-    //transparent:true,
   });
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
   mainWindow.setMenuBarVisibility(false)
