@@ -17,5 +17,5 @@ function changeThumbnail(){
 
 form.addEventListener('submit', (e) => {    
     e.preventDefault()
-    window.download()
+    console.log(window.download())
 });
